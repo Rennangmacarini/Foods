@@ -1,5 +1,6 @@
 import CategoryList from "./_components/category-list";
 import Header from "./_components/header";
+import ProductList from "./_components/product-list";
 import Search from "./_components/search";
 import Image from "next/image";
 
@@ -18,7 +19,11 @@ const Home = () => {
       <div className="px-5 pt-6">
       <Image src="/promo-banner-01.png" alt="Até 30% de desconto em pizza" height={0} width={0} className="h-auto w-full object-contain" sizes="100vw"/>
       </div>
-     
+  
+      <div className="pt-6">
+      <ProductList/>
+      </div>
+    
     </>
   );
 };
