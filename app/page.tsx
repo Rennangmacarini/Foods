@@ -3,6 +3,8 @@ import Header from "./_components/header";
 import ProductList from "./_components/product-list";
 import Search from "./_components/search";
 import Image from "next/image";
+import { Button } from "./_components/ui/button";
+import { ChevronRightIcon } from "lucide-react";
 
 const Home = () => {
   return (
@@ -17,13 +19,26 @@ const Home = () => {
       </div>
 
       <div className="px-5 pt-6">
-      <Image src="/promo-banner-01.png" alt="Até 30% de desconto em pizza" height={0} width={0} className="h-auto w-full object-contain" sizes="100vw"/>
+        <Image
+          src="/promo-banner-01.png"
+          alt="Até 30% de desconto em pizza"
+          height={0}
+          width={0}
+          className="h-auto w-full object-contain"
+          sizes="100vw"
+        />
       </div>
-  
-      <div className="pt-6">
-      <ProductList/>
+
+      <div className="space-y-4 pt-6">
+        <div className="px-5 flex justify-between items-center px-5">
+          <h2 className="semibold">Pedidos Recomendados</h2>
+          <Button variant="ghost" className="h-fit p-0 text-primary hover:bg-transparent">
+            Ver todos
+            <ChevronRightIcon size={16}/>
+          </Button>
+        </div>
+        <ProductList />
       </div>
-    
     </>
   );
 };
